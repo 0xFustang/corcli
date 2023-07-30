@@ -9,6 +9,7 @@ url = "https://cortex.local"
 verify_cert = true
 
 hashlookup = 'CIRCLHashlookup_1_1'
+urlhaus = 'URLhaus_2_0'
 malbazaar = 'MalwareBazaar_1_0'
 eml = 'EmlParser_2_1'
 vt = 'VirusTotal_GetReport_3_1'
@@ -18,11 +19,10 @@ octi = 'OpenCTI_SearchObservables_2_0'
 
 [cortex-instance.dev]
 url = "https://cortex-dev.local"
-verify_cert = true
+verify_cert = false
 
 octi = 'OpenCTI_SearchObservables_2_0'
 
-[cortex-instance.qa]
-url = "https://cortex-qa.local/"
-verify_cert = false
-
+[cortex-instance.ext]
+url = "https://cortex-ext.local/"
+verify_cert = true

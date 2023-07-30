@@ -99,7 +99,15 @@ class Cortex:
         return options
 
     def download_file(self, file_id, filename):
+        """Download a file attachment from job
 
+        This method downloads a file attachment from Cortex's datastore using the given file ID.
+        The downloaded file will be saved with the provided filename as a zip file.
+
+        Returns:
+            None
+
+        """
         headers = {
             "Authorization": f"Bearer {self._cortex_api}"
         }
@@ -108,7 +116,7 @@ class Cortex:
 
         response = requests.get(url, headers=headers)
 
-        print(response.status_code)
+        filename = filename + '.zip'
 
         if response.status_code == 200:
             with open(filename, 'wb') as f:
@@ -166,17 +174,6 @@ class Cortex:
                 else:
                     result = '- [{}]: {}'.format(a.dataType, a.data)
                 results.append(result)
-
-            #job_attachments = self._api.jobs.get_report(self._job_id).attachment
-
-#            if job_attachments != '{}':
-#                for a in job_attachments:
-#                    if a.dataType == "file":
-#                        result = '- [{}]: file detected'.format(a.dataType)
-#                    else:
-#                        result = '- [{}]: {}'.format(a.dataType, a.data)
-#                    results.append(result)
-
             return results
 
         elif self._full_report:
