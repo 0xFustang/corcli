@@ -30,7 +30,6 @@ Key features are:
 
 
 ## Installation
----
 
 ### with pip 
 
