@@ -50,7 +50,7 @@ A [docker image] is available from the repository and comes with all dependencie
 docker pull ghcr.io/0xfustang/corcli:1.0.0
 ```
 
-[docker image]: https://pypi.org/project/corcli/
+[docker image]: https://github.com/0xFustang/corcli/pkgs/container/corcli
 
 ## License
 
