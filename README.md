@@ -28,6 +28,29 @@ Key features are:
 [TheHive Project]: https://thehive-project.org/
 [Cortex]: https://github.com/TheHive-Project/Cortex
 
+
+## Installation
+---
+
+### with pip 
+
+`corcli` is published as a [Python package] and can be installed with `pip`, ideally by using a [virtual environment]. Open up a terminal and install corcli with:
+
+```sh
+pip install corcli
+```
+
+[Python package]: https://pypi.org/project/corcli/
+[virtual environment]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
+
+### using Docker
+
+A [docker image] is available from the repository and comes with all dependencies pre-installed. Open up a terminal and pull the image with:
+
+TODO.
+
+[docker image]: https://pypi.org/project/corcli/
+
 ## License
 
 GPLv3
