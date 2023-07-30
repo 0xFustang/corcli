@@ -1,0 +1,28 @@
+name: Publish to PyPI.org
+on:
+  release:
+    types: [published]
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --upgrade build && python3 -m build
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+  docker_publish:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build and publish a Docker image for ${{ github.repository }}
+              uses: macbre/push-to-ghcr@master
+              with:
+                image_name: ${{ github.repository }}
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+      

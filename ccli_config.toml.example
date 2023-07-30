@@ -1,0 +1,28 @@
+# This is a TOML document config
+
+title = "cortex-cli configuration file"
+
+[cortex-instance]
+
+[cortex-instance.default]
+url = "https://cortex.local"
+verify_cert = true
+
+hashlookup = 'CIRCLHashlookup_1_1'
+malbazaar = 'MalwareBazaar_1_0'
+eml = 'EmlParser_2_1'
+vt = 'VirusTotal_GetReport_3_1'
+doh = 'GoogleDNS_resolve_1_0_0'
+misp = 'MISP_2_1'
+octi = 'OpenCTI_SearchObservables_2_0'
+
+[cortex-instance.dev]
+url = "https://cortex-dev.local"
+verify_cert = true
+
+octi = 'OpenCTI_SearchObservables_2_0'
+
+[cortex-instance.qa]
+url = "https://cortex-qa.local/"
+verify_cert = false
+
