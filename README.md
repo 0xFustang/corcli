@@ -4,6 +4,8 @@
 
 `corcli` was built in Python for this specific purpose.
 
+![Demo](img/demo.gif)
+
 ---
 
 **Documentation:** https://0xfustang.github.io/corcli-docs/
