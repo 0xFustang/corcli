@@ -99,7 +99,15 @@ class Cortex:
         return options
 
     def download_file(self, file_id, filename):
+        """Download a file attachment from job
 
+        This method downloads a file attachment from Cortex's datastore using the given file ID.
+        The downloaded file will be saved with the provided filename as a zip file.
+
+        Returns:
+            None
+
+        """
         headers = {
             "Authorization": f"Bearer {self._cortex_api}"
         }
