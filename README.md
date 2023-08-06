@@ -33,12 +33,15 @@ Key features are:
 
 ### with pip 
 
-`corcli` is published as a [Python package] and can be installed with `pip`, ideally by using a [virtual environment]. Open up a terminal and install corcli with:
+`corcli` is published as a [Python package] and can be installed with `pip`, ideally by using a [virtual environment]. Before installing `corcli`, install `libmagic` as [explained] in the installation doc.
+
+Open up a terminal and install corcli with:
 
 ```sh
 pip install corcli
 ```
 
+[explained]: https://0xfustang.github.io/corcli-docs/getting-started/#with-pip-recommended
 [Python package]: https://pypi.org/project/corcli/
 [virtual environment]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
 
