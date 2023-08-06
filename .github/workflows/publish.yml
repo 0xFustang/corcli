@@ -20,9 +20,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Build and publish a Docker image for ${{ github.repository }}
+            - name: Build and publish a Docker image for ${{ github.repository }} tag ${{ github.repository }}
               uses: macbre/push-to-ghcr@master
               with:
                 image_name: ${{ github.repository }}
                 github_token: ${{ secrets.GITHUB_TOKEN }}
-      
+            - name: Build and publish a Docker image for ${{ github.repository }} with latest tag version
+              uses: macbre/push-to-ghcr@master
+              with:
+                image_name: latest
+                github_token: ${{ secrets.GITHUB_TOKEN }}    
