@@ -36,7 +36,7 @@ jobs:
           uses: actions/checkout@v3
         - name: Release
           uses: softprops/action-gh-release@v1
-          id: create_release
+          id: create_release_tag
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
@@ -46,4 +46,16 @@ jobs:
             prerelease: false
             fail_on_unmatched_files: true
 
-
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Release
+          uses: softprops/action-gh-release@v1
+          id: create_release_latest
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            tag_name: latest
+            name: Release ${{  github.ref_name }}
+            draft: true
+            prerelease: false
+            fail_on_unmatched_files: true
