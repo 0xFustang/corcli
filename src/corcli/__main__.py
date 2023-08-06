@@ -103,7 +103,7 @@ def main() -> None:
     if args.download_files:
         args.extract_only = True
 
-    if not path.isfile(args.config_file):
+    if args.config_file and not path.isfile(args.config_file):
         print(f'Error: configuration file {args.config_file} not found.')
         exit(1)
 

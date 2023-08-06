@@ -45,5 +45,3 @@ jobs:
             draft: true
             prerelease: false
             fail_on_unmatched_files: true
-
-
