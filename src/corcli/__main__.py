@@ -162,7 +162,11 @@ def main() -> None:
                     alias_value = config_cortex_info[alias]
                     if isinstance(alias_value, list):
                         for a in alias_value:
-                            alias_values.append(a)
+                            try:
+                                alias_value = config_cortex_info[a]
+                            except KeyError:
+                                raise KeyError(f"The alias {a} is not found in preset {args.alias}.")
+                            alias_values.append(alias_value)
                     else:
                         alias_values.append(alias_value)
                 else:
