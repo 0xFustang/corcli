@@ -17,6 +17,12 @@ doh = 'GoogleDNS_resolve_1_0_0'
 misp = 'MISP_2_1'
 octi = 'OpenCTI_SearchObservables_2_0'
 
+[cortex-instance.default.malware]
+
+hashlookup = 'CIRCLHashlookup_1_1'
+malbazaar = 'MalwareBazaar_1_0'
+vt = 'VirusTotal_GetReport_3_1'
+
 [cortex-instance.dev]
 url = "https://cortex-dev.local"
 verify_cert = false
