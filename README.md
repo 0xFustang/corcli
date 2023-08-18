@@ -50,7 +50,7 @@ pip install corcli
 A [docker image] is available from the repository and comes with all dependencies pre-installed. Open up a terminal and pull the image with:
 
 ```sh
-docker pull ghcr.io/0xfustang/corcli:1.0.0
+docker pull ghcr.io/0xfustang/corcli:1.0.1
 ```
 
 [docker image]: https://github.com/0xFustang/corcli/pkgs/container/corcli
