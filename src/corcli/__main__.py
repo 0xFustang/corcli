@@ -160,13 +160,21 @@ def main() -> None:
             try:
                 if alias in config_cortex_info:
                     alias_value = config_cortex_info[alias]
-                    alias_values.append(alias_value)
+                    if isinstance(alias_value, list):
+                        for a in alias_value:
+                            try:
+                                alias_value = config_cortex_info[a]
+                            except KeyError:
+                                raise KeyError(f"The alias {a} is not found in preset {args.alias}.")
+                            alias_values.append(alias_value)
+                    else:
+                        alias_values.append(alias_value)
                 else:
                     print(f"alias '{alias}' not found in the config")
                     exit(1)
             except Exception:
                 raise Exception("Something unexepected happened...")
-
+            
         args.alias = alias_values
 
     if args.api_key:
